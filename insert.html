@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://www.avrtechnology.in/wp-content/uploads/2019/06/logo-200.png">
+	<title>search</title>
+	<style type="text/css">
+		#left-container
+		{
+			align-content: center;
+			height: 500px;
+			width: 900px;
+			border-radius: 10px;
+			background-color:white;
+			margin-top: 50px;
+			margin-left: 250px;
+		}
+		.text
+		{
+			margin-top: 40px;
+			margin-left: 5px;
+			background-color: #eee;
+			border: none;
+			padding: 15px;
+			width: 120px;
+		}
+		.add
+		{
+			float: right;
+			margin-top: 70px;
+			margin-right: 70px;
+		}
+		.add:hover
+		{
+			cursor: pointer;
+		}
+		.button
+		{
+			float: right;
+			margin-top: 75px;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+<div id="left-container">
+	
+	<form method="post" action="http://avrtechnology.in/internal/showdata.php">
+		<img class="add" src="https://www.avrtechnology.in/public_html/wp-content/uploads/2019/06" height="30px" width="30px" onclick="add()">
+		<input type="submit" class="button" name="validate" value="Print"><br>
+		<input type="checkbox" class="text" name="check">
+		<input type="text" class="text" name="serial" placeholder="Serial Number">
+		<input type="date" class="text" name="startdate">
+		<input type="date" class="text" name="enddate">
+	</form>
+</div>
+<script type="text/javascript">
+	function add() {
+
+//Create an input type dynamically.
+var element = document.createElement("input");
+
+//Create Labels
+var label = document.createElement("Label");  
+
+//Assign different attributes to the element.
+element.setAttribute("type", "checkbox");
+element.setAttribute("value", "");
+element.setAttribute("name", "check");
+element.setAttribute("class", "text");
+
+// 'foobar' is the div id, where new fields are to be added
+var foo = document.getElementById("left-container");
+
+//Append the element in page (in span).
+foo.appendChild(label);
+foo.appendChild(element);
+//second text area
+var element = document.createElement("input");
+
+//Create Labels
+var label = document.createElement("Label");  
+
+//Assign different attributes to the element.
+element.setAttribute("type", "text");
+element.setAttribute("placeholder", "Serial Number");
+element.setAttribute("name", "serial");
+element.setAttribute("class", "text");
+
+// 'foobar' is the div id, where new fields are to be added
+var foo = document.getElementById("left-container");
+
+//Append the element in page (in span).
+foo.appendChild(label);
+foo.appendChild(element);
+
+//third text area
+var element = document.createElement("input");
+
+//Create Labels
+var label = document.createElement("Label");  
+
+//Assign different attributes to the element.
+element.setAttribute("type", "date");
+element.setAttribute("placeholder", "Entry Date");
+element.setAttribute("name", "startdate");
+element.setAttribute("class", "text");
+
+// 'foobar' is the div id, where new fields are to be added
+var foo = document.getElementById("left-container");
+
+//Append the element in page (in span).
+foo.appendChild(label);
+foo.appendChild(element);
+
+//fourth text area
+var element = document.createElement("input");
+
+//Create Labels
+var label = document.createElement("Label");  
+
+//Assign different attributes to the element.
+element.setAttribute("type", "date");
+element.setAttribute("placeholder", "Exit Date");
+element.setAttribute("name", "enddate");
+element.setAttribute("class", "text");
+
+// 'foobar' is the div id, where new fields are to be added
+var foo = document.getElementById("left-container");
+
+//Append the element in page (in span).
+foo.appendChild(label);
+foo.appendChild(element);
+var x = document.createElement("br");
+foo.appendChild(x);
+}
+</script>
+</body>
+</html>
